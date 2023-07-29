@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/icon.png">
+   
+ </head>
+
+ <body>
+    <nav class="nav_head">
+        <div class="logo"><img src="./images/icon.png"alt="company logo"></div>
+        <h1>BMSCE LIBRARY</h1>
+        <div class="right_Nav">
+             </div>
+    </nav>
+
+    <nav class="navbar background">
+        
+        </ul>
+        <ul class="nav_list">
+            
+            
+            <li ><a href="./index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li ><a href="./facilities.html">Facilities</a>
+                    
+            <li><a href="./e-resouces.html">E-Resources</a>
+                
+            </li>
+            <li class="active"><a href="#dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
+            <li><a href="./index.html#contact-in"><i class="fa fa-phone"></i>Contact us</a></li>
+         </ul>
+     </nav>
+     
+
+     
+     
+     <div class="row background_h">
+        
+                <div class="leftsection " >
+                    
+                    <ul>
+                        <div class="sidebar">
+                            <a href="./update.html" ><i class="active"></i> Update</a>
+                            <a href="./add.html" ><i class="fa fa-fw fa-wrench"></i> Add</a>
+                            <a href="#delete" class="active" style="color: black;"><i class="fa fa-fw fa-user"></i> Delete</a>
+                            <a href="./issue.html"><i class="fa fa-fw fa-envelope"></i> Issue</a>
+                            <a href="./return.html"><i class="fa fa-fw fa-envelope"></i>Return</a>
+                          </div>
+                        
+                        
+                    </ul>
+                 </div> 
+                 <div class="reg">
+                    <h1 style="font-size: 27px;">DELETE EXISTING BOOK </h1>
+                    <br/>
+                  
+                      <form name="deleteform" action="/submit2" method="post" onsubmit="return(myfunction());" >
+                        <!-- <label style="color: black">Book no
+                            <select name="bookidinput">
+                            <option value="none">none</option>   
+                            <option value = "CHEMICAL">CH0104</option>
+                            <option value = "CSE">CS0101</option>
+                            <option value = "CSE">CS0102</option>
+                            <option value = "CSE">CS0103</option>
+                            <option value = "CSE">CS0109</option>
+                            <option value = "CSE">CS0110</option>
+                            <option value = "CSE">CS0412</option>
+                            <option value = "CIVIL">CV0412</option>
+                            <option value = "CIVIL">CV0108</option>
+                            <option value = "ECE">EC0107</option>
+                            <option value = "MECHANICAL">ME0105</option>
+                            <option value = "MECHANICAL">ME0106</option>
+                            
+                            </select></label> -->
+
+                        <label for="bookid">Book ID</label>
+                        <input type="text" id="bookid" name="bookidinput" placeholder="enter bookid .."><br/>     
+                  
+                      <label for="bookname">Book Name</label>
+                      <input type="text" id="bname" name="booknameinput" placeholder="enter bookname .."><br/>
+                  
+                      <label for="author">Author</label>
+                      <input type="text" id="aname" name="authorinput" placeholder="enter author name .."><br/>
+
+                      <label for="publication">Publication</label>
+                      <input type="text" id="pname" name="publicationinput" placeholder="enter author name ..">
+                      
+                      <br/>        
+                   
+                    
+        
+        
+                      <input type="submit" value="DELETE" onclick="myfunction(document.deleteform)">
+                      <script>
+
+                       
+                        function myfunction(bookid){
+                            
+                            if(deleteform.bookid.value.length!=0)
+                            {
+                                alert("Book deleted successfully");
+                                // setTimeout(function() {window.location = "./update.html" });
+
+                             return true;
+
+                            }
+                            else{
+                            
+                            alert("Enter all fields")
+                             return false;
+                            }
+                            
+                        }
+                      </script>
+                    
+                      </form>
+                  </div> 
+             </div>       
+                   
+           
+          <footer>
+            <ul class="social_icons">
+                <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/bmsce_25/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://twitter.com/i/flow/login" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://in.linkedin.com/school/b.-m.-s.-college-of-engineering/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-flickr"></ion-icon></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#aboutus">About</a></li>
+                <li><a href="./facilities.html">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="./index.html#contact-in">Contact</a></li>
+        </ul>
+
+            <p>
+                © 2023 BMSCE LIBRARY 
+            </p>
+            </footer>
+            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html> 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/icon.png">
+   
+ </head>
+
+ <body>
+    <nav class="nav_head">
+        <div class="logo"><img src="./images/icon.png"alt="company logo"></div>
+        <h1>BMSCE LIBRARY</h1>
+        <div class="right_Nav">
+            </div>
+    </nav>
+
+    <nav class="navbar background">
+        
+        </ul>
+        <ul class="nav_list">
+            <!-- <div class="logo"><img src="./images/icon.png"alt="company logo"></div> -->
+            
+            <li ><a href="./index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li ><a href="./facilities.html">Facilities</a>
+                    
+            <li><a href="./e-resouces.html">E-Resources</a>
+                
+            </li>
+            <li class="active"><a href="#dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
+            <li><a href="./index.html#contact-in"><i class="fa fa-phone"></i>Contact us</a></li>
+         </ul>
+     </nav>
+     
+
+     
+     
+     <div class="row background_h">
+        
+                <div class="leftsection " >
+                    
+                    <ul>
+                        <div class="sidebar">
+                            <a href="./update.html" ><i class="active"></i> Update</a>
+                            <a href="#add" class="active" style="color: black;"><i class="fa fa-fw fa-wrench"></i> Add</a>
+                            <a href="./delete.html"><i class="fa fa-fw fa-user"></i> Delete</a>
+                            <a href="./issue.html" ><i class="fa fa-fw fa-envelope"></i> Issue</a>
+                            <a href="./return.html"><i class="fa fa-fw fa-envelope"></i>Return</a>
+                          </div>
+                        
+                        
+                    </ul>
+                 </div> 
+                 <div class="reg">
+                    <h1 style="font-size: 27px;">ADD BOOK DETAILS</h1>
+                    <br/>
+                    <form name="form1" action="/submit1" method="post" onsubmit="return(myfunction());">
+                      
+                        <label for="bookid">Book Id</label>
+                        <input type="text" id="bid" name="bookidinput" placeholder="enter book ID .." required><br/>
+
+                      <label for="bookname">Book Name</label>
+                      <input type="text" id="bname" name="booknameinput" placeholder="enter bookname .." required><br/>
+                  
+                      <label for="author">Author</label>
+                      <input type="text" id="aname" name="authorinput" placeholder="enter author name .." required>
+  
+                      <label for="publication">Publication</label>
+                      <input type="text" id="pname" name="publicationinput" placeholder="enter Publication name .." required>
+                      
+                      <br/>        
+                    <label style="color: black">Branch
+                        <select name="branches">
+                        <option value = "CSE">CSE</option>
+                        <option value = "ISE">ISE</option>
+                        <option value = "aiml">AIML</option>
+                        <option value = "E.COMM.">E.COMM.</option>
+                        <option value = "MECHANICAL">MECHANICAL</option>
+                        
+                        </select></label>
+                    
+                    
+        
+        
+                      <input type="submit" value="ADD" onclick="myfunction(document.form1)"onclick="">
+                      <!-- <script>
+                        function myfunction() {
+                          alert("Book successfully added!");
+                          
+                        }
+                        </script> -->
+                        <script>
+
+                       
+                            function myfunction(aname,bname,bid){
+                                
+                                if(form1.aname.value.length!=0 && form1.bname.value.length!=0 && form1.bid.value.length!=0)
+                                {
+                                    strValidate=form1.bid.value.search(/[0-9]{3}/i);
+                            if(strValidate== -1)
+                            {
+                            alert("Enter valid Book ID ");
+                            return false;
+                            }
+                            else
+                            {
+                    
+                                    alert("Book added successfully");
+                                    // setTimeout(function() {window.location = "./update.html" });
+    
+                                 return true;
+    
+                                }
+                            }
+                                else{
+                                
+                                alert("Enter all fields")
+                                 return false;
+                                }
+                            }
+                            
+                          </script>
+                        
+                    </form>
+                  </div> 
+             </div>       
+                   
+           
+          <footer>
+            <ul class="social_icons">
+                <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/bmsce_25/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://twitter.com/i/flow/login" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://in.linkedin.com/school/b.-m.-s.-college-of-engineering/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-flickr"></ion-icon></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#aboutus">About</a></li>
+                <li><a href="./facilities.html">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="./index.html#contact-in">Contact</a></li>
+            </ul>
+
+            <p>
+                © 2023 BMSCE LIBRARY 
+            </p>
+            </footer>
+            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html> 

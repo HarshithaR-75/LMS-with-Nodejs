@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retrieved Data</title>
+</head>
+<body>
+  <h1>Retrieved Data from MySQL</h1>
+  <ul>
+    <% data.forEach(item => { %>
+      <li><%= item.Usn %> - <%= item.Book_no %> <!-- Adjust column_name and another_column with actual column names from your table --></li>
+    <% }); %>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return book</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/icon.png">
+   
+ </head>
+
+ <body>
+    <nav class="nav_head">
+        <div class="logo"><img src="./images/icon.png"alt="company logo"></div>
+        <h1>BMSCE LIBRARY</h1>
+        <div class="right_Nav">
+             </div>
+    </nav>
+
+    <nav class="navbar background">
+        
+        </ul>
+        <ul class="nav_list">
+            <!-- <div class="logo"><img src="./images/icon.png"alt="company logo"></div> -->
+            
+            <li ><a href="./index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li ><a href="./facilities.html">Facilities</a>
+                    
+            <li><a href="./e-resouces.html">E-Resources</a>
+                
+            </li>
+            <li class="active"><a href="#dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
+            <li><a href="./index.html#contact-in"><i class="fa fa-phone"></i>Contact us</a></li>
+         </ul>
+     </nav>
+     
+
+     
+     
+     <div class="row background_h">
+        
+                <div class="leftsection " >
+                    
+                    <ul>
+                        <div class="sidebar">
+                            <a href="./update.html" ><i class="active"></i> Update</a>
+                            <a href="./add.html"><i class="fa fa-fw fa-wrench"></i> Add</a>
+                            <a href="./delete.html"><i class="fa fa-fw fa-user"></i> Delete</a>
+                            <a href="./issue.html"><i class="fa fa-fw fa-envelope"></i> Issue</a>
+                            <a href="#return" class="active" style="color: black;"><i class="fa fa-fw fa-envelope"></i>Return</a>
+                          </div>
+                        
+                        
+                    </ul>
+                 </div> 
+                 <div class="reg">
+                    <h1 style="font-size: 27px;">RETURN BOOK </h1>
+                    <br/>
+                   
+                        <form name="form1" action="/submit5" method="post" onsubmit="return(myfunction());" >
+
+                      <label for="Student_usn">USN </label>
+                      <input type="text" id="USN" name="usn" placeholder="USN" required> 
+                      <br/>
+                    
+                      <label for="bookid">Book ID</label>
+                      <input type="text" id="bookid" name="bookid" placeholder="Book ID" required>
+                      <br/>
+
+                      <label for="returndate">Returned on</label><br>
+                      <input type="date" id="returndate" name="returndate" required> 
+                      <br/><br>
+                      
+                      <input type="submit" value="RETURN BOOK" onclick="myfunction(document.form1)">
+                      </form>
+                  </div> 
+             </div>       
+                  
+             <script>
+                  function myfunction(usn,bookid,returndate){
+                    
+                    if(form1.usn.value.length!=0 && form1.bookid.value.length!=0 && form1.returndate.value.length!=0)
+                    {
+                        if(form1.usn.value.length==10 )
+                        {
+                        strValidate=form1.usn.value.search(/1BM[0-9]{2}[A-Z]{2}[0-9]{3}/i);
+                            if(strValidate== -1)
+                            {
+                            alert("Enter valid USN");
+                            return false;
+                            }
+                        }
+                        else
+                        {
+                            alert("Enter valid USN");
+                            return false;
+                        }
+
+                        strValidate1=form1.bookid.value.search(/[A-Z]{2}[0-9]{4}/i);
+                                if(strValidate1 ==- 1)
+                                {
+                                    alert("Enter valid BookId");
+                                    return false;
+                                }
+                                else{
+                                    alert("Book returned successfully");
+                                    return true;
+                                }
+                            }
+                    
+                        
+            
+                    else{
+                    
+                    alert("Enter all fields")
+                     return false;
+                    }
+                    
+                }
+              </script>
+            
+           
+          <footer>
+            <ul class="social_icons">
+                <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/bmsce_25/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://twitter.com/i/flow/login" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://in.linkedin.com/school/b.-m.-s.-college-of-engineering/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-flickr"></ion-icon></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#aboutus">About</a></li>
+            <li><a href="./facilities.html">Services</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="./index.html#contact-in">Contact</a></li>
+            </ul>
+
+            <p>
+                © 2023 BMSCE LIBRARY 
+            </p>
+            </footer>
+            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html> 

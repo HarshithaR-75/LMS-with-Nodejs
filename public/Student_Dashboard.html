@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/icon.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+ </head>
+
+ <body>
+    <div>
+    <nav class="nav_head">
+        <div class="logo"><img src="./images/icon.png"alt="company logo"></div>
+        <h1>BMSCE LIBRARY</h1>
+        
+        <div class="right_Nav">
+            <!-- <button class="button button1">login</button> </div> -->
+    </nav>
+
+    <nav class="navbar background">
+        
+        </ul>
+        <ul class="nav_list">
+            <!-- <div class="logo"><img src="./images/icon.png"alt="company logo"></div> -->
+            <div class="action">
+              <div class="profile" onclick="menuToggle();">
+                <img src="./images/profile.jpeg" />
+              </div>
+              <div class="menu">
+                <div class="dropdown-menu dropdown-menu-right tx-13 show">
+                  <div class="avatar avatar-lg mg-b-15"><img src="https://webcampus.bmsce.in/assets/student_pics/avatar.jpg" class="rounded-circle" alt=""></div>
+                  <h5 class="tx-semibold mg-b-5 text-danger">1BM21CS075</h5>
+                  <h6 class="tx-semibold mg-b-5">HARSHITHA R </h6>
+                  <p class="mg-b-25 tx-12 tx-color-03">Student</p>
+                  <div class="dropdown-divider"></div>
+                  <a href="" class="dropdown-item"></a>       
+                 </div>
+                <ul>
+                  
+                  <li>
+                    <img src="./images/logout.jpeg" /><a href="./index.html">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <script>
+              function menuToggle() {
+                const toggleMenu = document.querySelector(".menu");
+                toggleMenu.classList.toggle("active");
+              }
+            </script>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./facilities.html">Facilities</a></li>
+            <li><a href="./e-resouces.html">E-Resources</a>
+                
+            </li>
+            <li class="active"><a href="#dashboard"><i class=""></i>Dashboard</a></li>
+            <li><a href="index.html#contact-in"><i class="fa fa-phone"></i>Contact us</a></li>
+         </ul>
+         
+        </div>
+        
+     </nav>
+     <div class="imageslide">
+      <img class="mySlides" src="images/Csebookslib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/civilbookdlib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/eeebookslib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/Btbookslib.jpeg" style="width:100%">
+      <img class="mySlides" src="./images/mechbookslib.jpeg" style="width:100%">
+    </div>
+    
+    <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+    <div class="boxrow1">
+      <div class="box1">
+        <a href="./booksissued" style="text-decoration: none;"><h2>Books Issued</h2></a>
+        
+      </div>
+      <div class="box2">
+        <a href="./booksreturned" style="text-decoration: none;"><h2>Books Returned</h2></a>
+        
+      </div>
+      
+      </div>
+    <div class="boxrow2">
+
+      <div class="box3">
+        <a href="./booksnotreturned" style="text-decoration: none;"><h2>Books Not Returned</h2></a>
+        
+      </div>
+      </div>
+      <div class="box4">
+        <a href="./bookslatefee" style="text-decoration: none;"><h2>Late Fee Payment</h2></a>
+        
+      </div>
+     
+      </div>
+    
+    <br>
+    <div class="foot"> 
+        <footer>
+          <ul class="social_icons">
+              <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li><a href="https://www.instagram.com/bmsce_25/?hl=en" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li><a href="https://twitter.com/i/flow/login" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li><a href="https://in.linkedin.com/school/b.-m.-s.-college-of-engineering/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li><a href="#"><ion-icon name="logo-flickr"></ion-icon></a></li>
+          </ul>
+          <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html#aboutus">About</a></li>
+            <li><a href="./facilities.html">Services</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="./index.html#contact-in">Contact</a></li>
+        </ul>
+          <p>
+              © 2023 BMSCE LIBRARY 
+          </p>
+          </footer>
+       </div>
+          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+     
+    
+      
+  
+      </body>
+    </html>
